@@ -5,7 +5,7 @@ if(isset($_POST['deletebtn'])) {
     $data2 = $_POST['image'];//записуємо в змінну дані з форми по id input
     $data3 = $_POST['description'];//записуємо в змінну дані з форми по id input
     $sql = "INSERT INTO `tbl_categories` (`id`, `name`, `image`, `des`) VALUES (NULL, '$data1', '$data2', '$data3')"; //створюємо змінну з sql командою
-    if($data3 != '')
+    if($data3 != '')//перевірка на null
         $dbh->exec($sql);//виконуємо sql команду
 }
 ?>
